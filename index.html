@@ -17,6 +17,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><button class="dark-mode-toggle">Dark Mode</button></li> <!-- Added button -->
                 </ul>
             </nav>
         </div>
@@ -110,6 +111,13 @@
             <p></p>
         </div>
     </footer>
+
+    <script>
+        // Dark mode toggle functionality
+        document.querySelector('.dark-mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 
 </body>
 </html>
