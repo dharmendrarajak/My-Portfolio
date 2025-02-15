@@ -5,8 +5,35 @@ body {
     font-family: 'Arial', sans-serif;
     color: #000000;
     background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s; /* Added smooth transition for dark mode */
+}
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: transparent;
+    border: 2px solid #fff; /* White border */
+    color: #fff; /* White text */
+     /* Padding around the text */
+    font-size: 1.2em; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    text-align: center;
+    display: inline-block;
 }
 
+.dark-mode-toggle:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+}
+/* Optional: If you want the button to stay on the right, like the other navigation items */
+nav ul li:last-child {
+    margin-left: auto; /* Push the button to the right */
+}
+/* Dark Mode Global Styles (Added) */
+body.dark-mode {
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
 .container {
     width: 80%;
     margin: 0 auto;
@@ -21,6 +48,11 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+}
+
+/* Dark Mode Header (Added) */
+body.dark-mode header {
+    background-color: #000000; /* Dark header for dark mode */
 }
 
 nav ul {
@@ -40,6 +72,12 @@ nav ul li a {
     font-size: 1.2em;
 }
 
+
+/* Dark Mode Navigation Links (Added) */
+body.dark-mode nav ul li a {
+    color: #ccc; /* Lighter color for links in dark mode */
+}
+
 /* Hero Section */
 .hero {
     background-size: cover;
@@ -52,6 +90,12 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Dark Mode Hero Section (Added) */
+body.dark-mode .hero {
+    background-color: #333333; /* Dark background for the hero section */
+    color: #ffffff; /* Light text color for dark mode */
 }
 
 .profile-picture {
@@ -101,6 +145,12 @@ nav ul li a {
     margin: 10px 0;
 }
 
+/* Dark Mode Text (Added) */
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text p {
+    color: #ffffff; /* Light color text for dark mode */
+}
+
 .social-icons {
     text-align: left;
     margin: 20px 0;
@@ -133,11 +183,20 @@ nav ul li a {
     }
 }
 
+/* Dark Mode Social Icons (Added) */
+body.dark-mode .social-icons a {
+    color: #fff; /* Light color for social icons in dark mode */
+}
+
 /* About Section */
 .about {
     padding: 100px 20px;
     background-color: white;
     text-align: left;
+}
+
+body.dark-mode .about {
+    background-color: #333333; /* Dark background for about section */
 }
 
 .about h2 {
@@ -152,6 +211,11 @@ nav ul li a {
     align-items: center;
     flex-wrap: wrap;
     animation: fadeInUp 2s ease-in-out;
+}
+
+/* Dark Mode About Content (Added) */
+body.dark-mode .about-content p {
+    color: #ccc; /* Light color for text in dark mode */
 }
 
 .about-content img {
@@ -188,6 +252,12 @@ nav ul li a {
     text-align: center;
 }
 
+/* Dark Mode Work Section (Added) */
+body.dark-mode .work {
+    background-color: #222222; /* Dark background for work section */
+}
+
+
 .work h2 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -206,6 +276,12 @@ nav ul li a {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 2s ease-in-out;
+}
+
+/* Dark Mode Work Items (Added) */
+body.dark-mode .work-item {
+    background-color: #444444; /* Dark background for work items */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Light shadow for work items */
 }
 
 .work-item img {
@@ -229,4 +305,13 @@ nav ul li a {
 .contact {
     text-align: left;
     padding: 100px 20px;
+}
+/* Dark Mode Contact Section (Added) */
+body.dark-mode .contact {
+    background-color: #222222; /* Dark background for contact section */
+    color: #ffffff; /* Light text color for contact section in dark mode */
+}
+
+body.dark-mode .contact p {
+    color: #ccc; /* Lighter text for contact details in dark mode */
 }
